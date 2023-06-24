@@ -1,0 +1,111 @@
+//star pattern 1
+i=1
+while i<=4:
+    print(i * "*")
+    i+=1
+
+//star pattern 2
+i=4
+while i>=0:
+    print(i * "*")
+    i-=1
+
+//prime or non prime
+for i in range(1,101):
+    m=0
+    for j in range(2,(i//2)+1):
+        if(i%j==0):
+            m=m+1;
+            break
+    if(m>0 or i==1):
+        print(f"{i} is not a prime number")
+    else:
+        print(f"{i} is a prime number")
+
+
+//whether a string is a pallindrome using for loop
+
+name='naman'
+a=len(name)//2
+m=0
+for i in range(0,a):
+    if(name[i]==name[-(i+1)]):
+        m=m+1
+
+if(m==a):
+    print("its palidrome")
+else:
+    print("not palidrome")
+
+
+
+(* take input from user and count how many vowels are there:
+    1 total count of vowels
+    2 take a input from a user and count how many individual vowels are there
+    3 input from the user wherever a vowel mile so replace with '#'  *)
+    
+d1=input("Enter the input: ")
+q=[]
+
+for i in range(0,len(d1)):
+    q.append(d1[i])
+
+z=0
+#z=number of vowels
+
+a1=0
+a2=0
+a3=0
+a4=0
+a5=0
+for i in range(0,len(q)):
+    if(q[i]=='a' or q[i]=='e' or q[i]=='i' or q[i]=='o' or q[i]=='u'):
+        z=z+1
+        if(q[i]=='a'):
+            a1+=1
+        elif(q[i]=='e'):
+            a2+=1
+        elif(q[i]=='i'):
+            a3+=1
+        elif(q[i]=='o'):
+            a4+=1
+        else:
+            a5+=1
+        q[i]='#'
+        
+for i in range(0,len(q)):
+    print(q[i],end="")
+print(" ")
+print(z,a1,a2,a3,a4,a5)
+
+
+(*take a input from use if input is string then get all the unique word from that string
+unique=no duplicate word
+hi user hello user
+output=hi user hello*)
+
+x=input("Enter the input: ")
+l4=[]
+l5=[]
+
+f=''
+for i in range(0,len(x)):
+    if(x[i]!=' '):
+        f=f+x[i]
+    else:
+        l4.append(f)
+        f=''
+l4.append(f)
+
+k=len(l4)
+for i in range(0,k):
+    for j in range(i+1,k):
+        if l4[i] == l4[j]:
+            l4[j] = 0
+
+for i in range(0,k):
+    if(l4[i]!=0):
+        l5.append(l4[i])
+
+l5
+print(l5)

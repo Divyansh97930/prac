@@ -41,3 +41,19 @@ if(a1>0 and a2>0 and a3>0 and a4>0):
 else:
     print("wrong condition")
 
+
+//count each char and put in dict
+a=input("Enter the input: ")
+d1={}
+for i in range(0,len(a)):
+    x=1
+    m=0
+    for j in range(i+1,len(a)):
+        if(a[i]==a[j]):
+            x=x+1
+    for key in d1:
+        if(key==a[i]):
+            m=m+1
+    if(m==0):
+        d1[a[i]]=x
+print(d1)

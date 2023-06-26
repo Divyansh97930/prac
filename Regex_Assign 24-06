@@ -1,0 +1,43 @@
+(*            *
+            * *
+          * * *
+ *)
+for i in range(1,5):
+    for j in range(1,5):
+        if j>=5-i:
+            print("*", end='')
+        else:
+            print(" ", end='')
+    print()
+
+//Pyramid
+for i in range(1,5):
+    for j in range (1,8):
+        if j>=5-i and j<=3+i:
+            print("*", end='')
+        else:
+            print(" ", end='')
+    print()
+
+
+//ascii value
+a = input("enter string: ")
+a1=0    #c to z
+a2=0    #A to P
+a3=0    #0 to 9
+a4=0
+for i in range (0, len(a)):
+    if(ord(a[i])>=99 and ord(a[i])<=122):
+        a1+=1
+    elif(ord(a[i])>=65 and ord(a[i])<=80):
+        a2+=1
+    elif(ord(a[i])>=48 and ord(a[i])<=57):
+        a3+=1
+    elif(a[i]=='@' or a[i]=='!' or a[i]=='#'):
+        a4+=1
+
+if(a1>0 and a2>0 and a3>0 and a4>0):
+    print("exists")
+else:
+    print("wrong condition")
+

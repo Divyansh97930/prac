@@ -1,0 +1,33 @@
+//HCF
+a=int(input("enter a: "))
+b=int(input("enter b: "))
+smaller=min(a,b)
+while(b%smaller!=0 or a%smaller!=0):
+  c-=1
+print("hcf is: ",c)
+
+//LCM
+def lcmNum(a,b):
+    if a>b:
+        greater=a
+    else:
+        greater=b
+    while(True):
+        if((greater%a==0) and (greater%b==0)):
+            lcm=greater
+            break
+        greater+=1
+    return lcm
+
+x=int(input("enter a:"))
+y=int(input("enter b:"))
+print("lcm of ", x ,' and ', y ,' is ', lcmNum(x,y))
+
+//SWAP
+a=30
+b=20
+a=a+b
+b=a-b
+a=a-b
+print("a: ", a)
+print("b: ", b)

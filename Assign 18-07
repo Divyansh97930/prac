@@ -1,0 +1,20 @@
+import os
+import datetime
+import pywhatkit
+user_input = int(input("\nenter 1 to create a folder\n \nenter 2 to shut down the pc\n \nenter 3 to print the current date\n \nenter 4 to send a whatsapp message\n"))
+if user_input == 1:
+    path = 'C:\\Users\\user\\Desktop\\COLLEGE WRK'
+    os.chdir(path)
+    NewFolder='test'
+    os.makedirs(NewFolder)
+elif(user_input == 2):
+    sec=3
+    os.system(f'shutdown /s /t {sec}')
+elif(user_input == 3):
+    now = datetime.datetime.now()
+    print("current date and time is: ")
+    print(now.strftime("%d/%m/%y %H:%M:%S"))
+elif(user_input == 4):
+    pywhatkit.sendwhatmsg('+919351678124', 'pdhle haramkhor', 15, 39)
+else:
+    print('enter valid input')
